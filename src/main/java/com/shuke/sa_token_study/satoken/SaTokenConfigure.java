@@ -25,6 +25,10 @@ public class SaTokenConfigure implements WebMvcConfigurer {
             // 指定 [拦截路由] 与 [放行路由]
             SaRouter.match("/**")
                     .notMatch("/loginAuth/doLogin")
+                    .notMatch("/loginAuth/isLogin")
+                    .notMatch("/rememberMe/doLogin01")
+                    .notMatch("/rememberMe/doLogin02")
+                    .notMatch("/rememberMe/doLogin03")
                     .check(r -> StpUtil.checkLogin());
         }));
     }

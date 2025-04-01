@@ -42,7 +42,7 @@ public class RememberMeController {
     public SaResult rememberMeSeven(String name, String pwd ){
         if("zhang".equals(name) && "123456".equals(pwd)) {
             // 7天过期时间 单位：秒
-            StpUtil.login(10001,5000);
+            StpUtil.login(10001,60 * 60 * 24 * 7);
         }
         return SaResult.ok();
     }
