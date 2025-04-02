@@ -29,6 +29,7 @@ public class SaTokenConfigure implements WebMvcConfigurer {
                     .notMatch("/rememberMe/doLogin01")
                     .notMatch("/rememberMe/doLogin02")
                     .notMatch("/rememberMe/doLogin03")
+                    .notMatch("/searchSession/login")
                     .notMatch("/mutexLogin/*")
                     .check(r -> StpUtil.checkLogin());
         }));
